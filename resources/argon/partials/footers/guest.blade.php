@@ -1,2 +1,2 @@
 
-        @include('layouts.footers.nav')
+        @include('helaplusthemes::partials.footers.nav')
