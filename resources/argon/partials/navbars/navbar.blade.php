@@ -1,7 +1,7 @@
 @auth()
-    @include('layouts.navbars.navs.auth')
+    @include('helaplusthemes::partials.navbars.navs.auth')
 @endauth
     
 @guest()
-    @include('layouts.navbars.navs.guest')
+    @include('helaplusthemes::partials.navbars.navs.guest')
 @endguest
