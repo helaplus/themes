@@ -14,7 +14,7 @@ class ThemesServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'helaplus');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'helaplus');
+         $this->loadViewsFrom(__DIR__.'/../resources/argon', 'helaplusthemes');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
@@ -65,13 +65,13 @@ class ThemesServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../resources/argon/layouts' => base_path('resources/views/argon/layouts'),
             __DIR__.'/../resources/argon/partials' => base_path('resources/views/argon/partials'),
-            __DIR__.'/../resources/argon/public' => base_path('public/argon/'),
+            __DIR__.'/../resources/argon/public' => base_path('public/'),
         ], 'themes.views');
 
-        // Publishing assets.
-        /*$this->publishes([
-            __DIR__.'/../resources/assets' => public_path('vendor/helaplus'),
-        ], 'themes.views');*/
+//        // Publishing assets.
+//        $this->publishes([
+//            __DIR__.'/../resources/argon/public' => public_path('helaplustheme'),
+//        ], 'assets');
 
         // Publishing the translation files.
         /*$this->publishes([
