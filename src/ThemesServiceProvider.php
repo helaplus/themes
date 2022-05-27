@@ -56,15 +56,17 @@ class ThemesServiceProvider extends ServiceProvider
      */
     protected function bootForConsole(): void
     {
-        // Publishing the configuration file.
-        $this->publishes([
-            __DIR__.'/../config/themes.php' => config_path('themes.php'),
-        ], 'themes.config');
+//        // Publishing the configuration file.
+//        $this->publishes([
+//            __DIR__.'/../config/themes.php' => config_path('themes.php'),
+//        ], 'themes.config');
 
         // Publishing the views.
-        /*$this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/helaplus'),
-        ], 'themes.views');*/
+        $this->publishes([
+            __DIR__.'/../resources/argon/layouts' => base_path('resources/views/argon/layouts'),
+            __DIR__.'/../resources/argon/partials' => base_path('resources/views/argon/partials'),
+            __DIR__.'/../resources/argon/public' => base_path('public/argon/'),
+        ], 'themes.views');
 
         // Publishing assets.
         /*$this->publishes([
