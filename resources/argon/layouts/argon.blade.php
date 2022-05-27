@@ -32,15 +32,15 @@
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         @csrf
     </form>
-    @include('themes::partials.navbars.sidebar')
+    @include('helaplusthemes::partials.navbars.sidebar')
 @endauth
 <div class="main-content">
-    @include('themes::partials.navbars.navbar')
+    @include('helaplusthemes::partials.navbars.navbar')
     @yield('content')
 </div>
 
 @guest()
-    @include('themes::partials.footers.guest')
+    @include('helaplusthemes::partials.footers.guest')
 @endguest
 
 <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
